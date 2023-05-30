@@ -28,7 +28,7 @@ serviceArr.forEach(service => {
   serviceCard.classList.add("col-4");
   serviceCard.innerHTML = `<div class="card" style="width: 18rem;">
   <img src="${service.img}" class="card-img-top" alt="...">
-  <div class="card-body">
+  <div class="card-body text-center">
     <h5 class="card-title">${service.title}</h5>
     <p class="card-text">${service.Description}</p>
     <a href="#" class="btn btn-primary">Select Service</a>

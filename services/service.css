@@ -1,0 +1,10 @@
+.card img{
+    width:286px;
+    height: 200px;
+}
+.card{
+    margin: 5px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
