@@ -25,7 +25,7 @@ const serviceArr = [
 let serviceElement = document.getElementById("service");
 serviceArr.forEach(service => {
   let serviceCard = document.createElement("div");
-  serviceCard.classList.add("col-4");
+  //  serviceCard.classList.add("col-2");
   serviceCard.innerHTML = `<div class="card" style="width: 18rem;">
   <img src="${service.img}" class="card-img-top" alt="...">
   <div class="card-body text-center">
@@ -34,8 +34,26 @@ serviceArr.forEach(service => {
     <a href="#" class="btn btn-primary">Select Service</a>
   </div>
   </div>`
-  
-
   serviceElement.appendChild(serviceCard);
 })
+// let selectServiceBtn = document.querySelectorAll(".btn")
+// const userSelection = function(selectionArr){
+//   const userList = document.getElementById("cart");
+//   selectionArr.forEach((selection) => {
+//     let selectionList = document.createElement("ul");
+//     selectionList.innerHTML = `<li>${selection.title}</li>
+//     <li>${selection.Description}</li>`
+//     userList.appendChild(selectionList)
+//   })
+// }
+// let selectServiceBtn = document.querySelectorAll(".btn").values;
+// console.log(selectServiceBtn);
+// selectServiceBtn.forEach((btn)  =>{
+//   btn.addEventListener("click",function(event){
+
+//   })
+
+// })
+
+
 
