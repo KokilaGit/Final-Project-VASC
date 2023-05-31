@@ -22,9 +22,19 @@
 }
 #cart{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    /* justify-content: center; */
     margin-right:30px; 
    padding: 50px;
    border: green solid 5px;
+}
+#selectedList{
+    display: flex;
+    flex-direction: column;
+    
+}
+.total{
+    display: flex;
+    justify-content: flex-start;
 }
