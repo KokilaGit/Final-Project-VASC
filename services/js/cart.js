@@ -10,4 +10,8 @@ class Cart{
     setLocalStorage(){
         localStorage.setItem("cart",JSON.stringify(this))
     }
+    getLocalStorage(){
+        let cart = JSON.parse(localStorage.getItem("cart"));
+        return cart;
+    }
 }
