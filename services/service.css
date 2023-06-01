@@ -1,3 +1,4 @@
+
 .card img{
     width:286px;
     height: 200px;
@@ -32,9 +33,13 @@
 #selectedList{
     display: flex;
     flex-direction: column;
+    list-style-type: none;
+    /* padding-left: 0px; */
+
     
 }
 .total{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
 }

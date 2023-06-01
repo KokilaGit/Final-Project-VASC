@@ -1,15 +1,16 @@
+
 //creating servicearray of objects for card
 const serviceArr = [
   {
     title: "Cooking",
-    img: "images/cooking.jpeg",
+    img: "images/home-cooking.jpg",
     Description:
       "Our care team provides thoughtful in-home cooking services for seniors to ensure you have the most enjoyable culinary experience at every meal.",
     price: "50",
   },
   {
     title: "Grocery",
-    img: "./images/grocery.jpg",
+    img: "./images/grocery2.jpg",
     Description:
       "Our care team provides thoughtful in-home cooking services for seniors to ensure you have the most enjoyable culinary experience at every meal.",
       price: "60"  
@@ -50,6 +51,9 @@ const serviceArr = [
     price: "170"
   },
 ];
+//create object 
+let userId = "user-001";
+let cartObj = new Cart(userId)
 
 //adding content to servicecard 
 let serviceElement = document.getElementById("service");
@@ -86,7 +90,7 @@ selectServiceBtn.forEach((btn) => {
     if (addFlag) {
       const userList = document.getElementById("selectedList");
       if(list.length === 0){
-        let heading = document.createElement("h2")
+        let heading = document.createElement("h4")
         heading.innerHTML = "Selected Service"
         userList.appendChild(heading)
       }
@@ -95,7 +99,9 @@ selectServiceBtn.forEach((btn) => {
       <li id = "listElement">${event.target.getAttribute("data-id")} -$${priceElement}</li>`
       let total = document.querySelector(".total")
       total.innerHTML = `Total=${totalPrice += Number(priceElement)}`;
-      
+      //update cart object
+      cartObj.addService(event.target.getAttribute("data-id"),priceElement)
+      cartObj.setLocalStorage();
     } else {
       alert("Duplicate item");
     }
